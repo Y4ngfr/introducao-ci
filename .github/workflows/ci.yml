@@ -22,7 +22,7 @@ jobs:
           go-version: "1.22"
 
       - name: Compilar a aplicacao
-        run: go build .
+        run: go build ./...
 
       - name: Executar os testes
         run: go test -v ./...
