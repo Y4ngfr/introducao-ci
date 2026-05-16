@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main  
 
 jobs:
   build-and-test:
@@ -17,9 +20,12 @@ jobs:
         uses: actions/setup-go@v5
         with:
           go-version: "1.26"
-      
-      # TODO: adicionar um passo para compilar a aplicacao Go.
-      # Dica: use apenas um comando.
 
-      # TODO: adicionar um passo para executar os testes.
-      # Dica: use apenas um comando.
+      - name: Compilar a aplicacao
+        run: go build .
+
+      - name: Executar os testes
+        run: go test -v ./...
+
+      - name: Construir Imagem Docker
+        run: docker build -t introducao-ci-app:latest .

@@ -1,0 +1,27 @@
+1. Explique como a pipeline é disparada no GitHub Actions. Na sua resposta, 
+cite especificamente o que você configurou no arquivo ci.yml.
+    O pipeline é disparado com a definição de eventos que monitoram o repositório no 
+    GitHub; no arquivo ci.yml defini no bloco "on:" para o pipeline ser ativado durante
+    o evento de um push e de um pull request 
+
+
+2. O que é um runner no GitHub Actions e qual o seu papel na execução da pipeline?
+    Um runner é uma máquina virtual que a Microsoft hospeda e disponibiliza gratuitamente 
+    para o pipeline ocorrer.
+
+
+3. Qual a diferença entre buildar a aplicação inteira como binário e buildar a imagem Docker?
+    O container é mais versátil, modularizável e portável, empacotando o binário junto
+    com todas as dependências do sistema operacional. O binário compilado diretamente do
+    sistema operacional e da arquitetura da máquina onde ele foi gerado.
+
+
+4. Por que usar Docker em uma pipeline CI pode ser útil?
+    Para modularização e padronização do ambiente.
+
+5. Altere temporariamente o código para fazer um teste falhar.
+O que aconteceu com o pipeline?
+
+
+
+Em qual etapa ele falhou?
